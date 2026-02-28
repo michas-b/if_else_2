@@ -26,10 +26,9 @@ public class Main {
         }
 
         //Задача 3
-        /*
         int year = 2021;
         if (year > 1584) {
-            if ( ) {
+            if (((year - 1584)%4)==0) {
                 System.out.println(year + " год является високосным");
             } else {
                 System.out.println(year + " год не является високосным");
@@ -37,7 +36,6 @@ public class Main {
         } else {
             System.out.println(year + " год не является високосным");
         }
-        */
 
         //Задача 4
         short deliveryDistance = 95;
