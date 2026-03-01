@@ -1,3 +1,8 @@
+/.idea/
+*.iml
+.idea
+if_else_2.iml
+
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
@@ -28,6 +33,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-/.idea/
-*.iml
-.idea
+
