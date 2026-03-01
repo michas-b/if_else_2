@@ -26,13 +26,12 @@ public class Main {
         }
 
         //Задача 3
-        int year = 2021;
-        int yearDifference = year - 1584;
-        if ((yearDifference % 400) == 0 && yearDifference > 0) {
+        int year = 1580;
+        if ((year % 400) == 0 && year >= 1584) {
             System.out.println(year + " год является високосным");
-        } else if ((yearDifference % 100) == 0) {
+        } else if ((year % 100) == 0 && year >= 1584) {
             System.out.println(year + " год не является високосным");
-        } else if (((yearDifference % 4) == 0) && yearDifference > 0) {
+        } else if ((year % 4) == 0 && year >= 1584) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -54,6 +53,10 @@ public class Main {
         //Задача 5
         short monthNumber = 12;
         switch (monthNumber) {
+            default:
+                if (monthNumber < 0 && monthNumber > 12) {
+                    break;
+                }
             case 12:
             case 1:
             case 2:
@@ -74,8 +77,7 @@ public class Main {
             case 11:
                 System.out.println("Месяц " + monthNumber + "й относится к сезону осень");
                 break;
-            default:
-                break;
+
         }
     }
 }
