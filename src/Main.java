@@ -27,57 +27,55 @@ public class Main {
 
         //Задача 3
         int year = 2021;
-        if (year > 1584) {
-            if (((year - 1584) % 4) == 0) {
-                System.out.println(year + " год является високосным");
-            } else {
-                System.out.println(year + " год не является високосным");
-            }
+        int yearDifference = year - 1584;
+        if ((yearDifference % 400) == 0 && yearDifference > 0) {
+            System.out.println(year + " год является високосным");
+        } else if ((yearDifference % 100) == 0) {
+            System.out.println(year + " год не является високосным");
+        } else if (((yearDifference % 4) == 0) && yearDifference > 0) {
+            System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
         }
 
+
         //Задача 4
         short deliveryDistance = 95;
-        short deliveryDays = 0;
-        if (deliveryDistance < 100) {
-            if (deliveryDistance < 20) {
-                deliveryDays = 1;
-            } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-                deliveryDays = 2;
-            } else {
-                deliveryDays = 3;
-            }
-            System.out.println("Потребуется дней: " + deliveryDays);
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется дней: " + 1);
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            System.out.println("Потребуется дней: " + 2);
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
+            System.out.println("Потребуется дней: " + 3);
         } else {
             System.out.println("Доставки нет");
         }
 
         //Задача 5
         short monthNumber = 12;
-        if (monthNumber <= 12) {
-            switch (monthNumber) {
-                case 12:
-                case 1:
-                case 2:
-                    System.out.println("Месяц " + monthNumber + "й относится к сезону зима");
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    System.out.println("Месяц " + monthNumber + "й относится к сезону весна");
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    System.out.println("Месяц " + monthNumber + "й относится к сезону лето");
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                    System.out.println("Месяц " + monthNumber + "й относится к сезону осень");
-                    break;
-            }
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Месяц " + monthNumber + "й относится к сезону зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Месяц " + monthNumber + "й относится к сезону весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Месяц " + monthNumber + "й относится к сезону лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Месяц " + monthNumber + "й относится к сезону осень");
+                break;
+            default:
+                break;
         }
     }
 }
