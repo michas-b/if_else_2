@@ -26,7 +26,7 @@ public class Main {
         }
 
         //Задача 3
-        int year = 1580;
+        int year = 2021;
         if ((year % 400) == 0 && year >= 1584) {
             System.out.println(year + " год является високосным");
         } else if ((year % 100) == 0 && year >= 1584) {
@@ -77,7 +77,6 @@ public class Main {
             case 11:
                 System.out.println("Месяц " + monthNumber + "й относится к сезону осень");
                 break;
-
         }
     }
 }
